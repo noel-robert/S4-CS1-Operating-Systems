@@ -15,12 +15,11 @@ int main() {
 		temp[i] = -1; age[i] = -1;
 	}
 
-	int index=0;
 	for(int i=0; i<pages; i++) {
 		int flag = 0;	// flag=0 means refString[i] not there in temp[]
 		int pos = 0;
 		
-		// find in refString[i] is present in temp[]
+		// find if refString[i] is present in temp[]
 		for(int j=0; j<frames; j++) {
 			if(refString[i] == temp[j]) {
         flag = 1; pos = j; hits++;
