@@ -32,7 +32,9 @@ int main() {
 			pageFaults++;
 			temp[(index++)%frames] = refString[i];
 		}
-		
+
+		for(int i=0; i<frames; i++) printf("%d ", temp[i]);
+		printf("\n");
 	}
 	printf("Page Faults = %d\n", pageFaults);
 	printf("Hits = %d\n", hits);

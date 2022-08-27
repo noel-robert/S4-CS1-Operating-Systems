@@ -40,6 +40,9 @@ int main() {
 					pos = j;
 				}
 			}
+
+			if(i < frames) pos = i;
+			
 			temp[pos] = refString[i];
 			age[pos] = -1;
 			pageFaults++;
@@ -50,6 +53,8 @@ int main() {
 			age[j]++;
 		}
 		
+		for(int i=0; i<frames; i++) printf("%d ", temp[i]);
+		printf("\n");
 	}
 	printf("Page Faults = %d\n", pageFaults);
 	printf("Hits = %d\n", hits);
