@@ -75,7 +75,7 @@ void scan() {
 		// to other side (L->R)
 		sum += abs(cpy[0] - cpy[pos+1]);
 		// right side
-		for(i=pos+1; i<(n+2)+1; i++)						// *
+		for(i=pos+1; i<(n+2)+1; i++)						// or i<(n+2)-1 ??
 			sum += abs(cpy[i-1] - cpy[i]);
 	}
 
@@ -119,7 +119,7 @@ void cscan() {
 		while(i != pos) {
 			//printf("%d ", i);
 			sum += abs(cpy[i-1] - cpy[i]);
-			i = (i+1)%(n+2);
+			i = (i+1)%(n+2);			//this shouldn't be done when i==0
 		}
 		sum += (end - start);								//*
 	}
